@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>EasyTrip2 | Login</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="js_css/js1.js"></script>
+  <link rel="stylesheet" type="text/css" href="js_css/style.css">
+</head>
+
+<body class="login">
+  <h1 id="titleFont"><em><strong>EasyTrip</strong></em></h1>
+  <div class="login-box">
+    <div class="left-box">
+      <h1 id="boxTitleFont"><em> SIGN UP</em></h1>
+      <form class="form-inline justify-content-center">
+        <input type="text" id="Uname" placeholder="Full Name" />
+        <input type="text" id="Uemail" placeholder="Email" />
+        <input type="password" id="Upassword" placeholder="Password" />
+        <input type="password" placeholder="Confirm Passowrd" />
+        <button type="button" onclick="signup()" class="signinbtn">SIGN UP</button> </br>
+      </form>
+    </div>
+    <div class="right-box">
+      <h1 id="boxTitleFont"> <em> SIGN IN </em></h1>
+      <form class="form-inline justify-content-center">
+        <input type="text" id="Ename" placeholder="Name" />
+        <input type="password" id="Epassword" placeholder="Password" />
+        <button type="button" onclick="signup()" class="signinbtn">LOGIN</button> </br>
+      </form>
+      <button class="social facebook" onclick="document.getElementById('fblogin').style.display='block'">Facebook</button>
+      <button class="social google" onclick="document.getElementById('googlelogin').style.display='block'">Google</button>
+
+      <div id="fblogin" class="modal">
+        <form class="modal-content animate">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('fblogin').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="img/facebook.png" alt="Avatar" class="avatar">
+          </div>
+          <div class="container" align=center>
+            <label><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" id="Fname"  >
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" id="Fpassword">
+            <button type="button" onclick="facebookSignin()" class="signinbtn">LOGIN</button> </br>
+            <button type="button" onclick="document.getElementById('fblogin').style.display='none'" class="cancelbtn">Cancel</button>
+          </div>
+        </form>
+      </div>
+      <div id="googlelogin" class="modal">
+        <form class="modal-content animate">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('googlelogin').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="img/google.png" alt="Avatar" class="avatar">
+          </div>
+          <div class="container" align=center>
+            <label><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" id="Gname" required>
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" id="Gpassword" required>
+            <button type="button" onclick="googleSignin()" class="signinbtn">LOGIN</button> </br>
+            <button type="button" onclick="document.getElementById('googlelogin').style.display='none'" class="cancelbtn">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>EasyTrip | Search</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <!-- <link href="css/misc.css" rel="stylesheet">
+    <script src="js/misc.js"></script> -->
+
+  <!-- Custom styles for this template -->
+  <link href="css/misc.css" rel="stylesheet">
+
+  <script src="js_css/js1.js"></script>
+  <link rel="stylesheet" type="text/css" href="js_css/style.css">
+
+
+  <style>
+    /* Make the image fully responsive */
+    .carousel-inner img {
+        width: 60%;
+        height: 60%;
+    }
+    </style>
+
+</head>
+
+
+
+<body>
+  <nav class="navbar navbar-dark fixed-top">
+    <a class="navbar-brand" href="LandingPage.html">EasyTrip</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="profile.html">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="LandingPage.html">Active Trips / Plan a Trip</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="calendar.html">Calendar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="previoustrips.html">Previous Trips</a>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  </br></br>
+
+  <h1 id="titleFont">
+    Your trip in
+     <span style="font-weight:bold" id="getPlace"></span>!
+  </h1>
+
+  <!-- Search form -->
+  <div class="content">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="Where?">
+      <div class="input-group-append">
+        <button class="btn btn-secondary" type="button" onclick=result()>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  </br></br>
+
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <a href="places/americanmuseum.html"><img class="result" src="img/search/americanmuseum.jpg" style="height: 300px; width:300px;">
+          <p>American Museum</p>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="places/centralpark.html"><img class="result" src="img/search/centralpark.jpg" style="height: 300px; width:300px;">
+          <p>Central Park</p>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="places/metromuseum.html"><img class="result" src="img/search/metromuseum.jpg" style="height: 300px; width:300px;">
+          <p>Metro Museum</p>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <a href="places/modernmuseum.html"><img class="result" src="img/search/modernmuseum.jpg" style="height: 300px; width:300px;">
+          <p>Modern Museum</p>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="places/statueofliberty.html"><img class="result" src="img/search/statue.jpg" style="height: 300px; width:300px;">
+          <p>Statue of Liberty</p>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="places/timessquare.html"><img class="result" src="img/search/timessquare.jpg" style="height: 300px; width:300px;">
+          <p>Time Square</p>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <h2 class="font-weight-bold text-center">Recommendation</h2>
+    <!-- Image Preview -->
+    <div id="demo" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <!-- <li data-target="#demo" data-slide-to="2"></li> -->
+      </ul>
+
+      <!-- The slideshow -->
+      <div class="carousel-inner text-center">
+        <div class="carousel-item active">
+          <img src="img/chicago.jpg" alt="G11111111111">
+          <h4>Chicago</h4>
+          <p class="lead mb-0">
+            Seems like you are having fun @Newyork. </br> How about <b> @Chicago</b>?
+          </p>
+        </div>
+        <div class="carousel-item">
+          <img src="img/disneyland.jpg" alt="G@@@@@@@@@@@">
+          <h4>Disneyland</h4>
+          <p class="lead mb-0">
+            Did you have fun @disneyland last winter? </br> How about
+            <b> <a href="review.html">Disneyworld</a> </b>?
+          </p>
+        </div>
+        <!-- <div class="carousel-item">
+          <img src="img/golf.jpg" alt="New York">
+        </div> -->
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+
+    </div>
+
+</body>
+<script src="js_css/updateLS.js"></script>
+<script src="js_css/js1.js"></script>
+</html>

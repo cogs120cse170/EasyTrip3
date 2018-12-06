@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>EasyTrip | Profile</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="js_css/js1.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="js_css/style.css">
+</head>
+
+<body class="profile">
+  <!-- Top Nav Bar -->
+  <nav class="navbar navbar-dark fixed-top">
+    <a class="navbar-brand" href="LandingPage.html">EasyTrip</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="profile.html">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="LandingPage.html">Active Trips / Plan a Trip</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="calendar.html">Calendar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="previoustrips.html">Previous Trips</a>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <h1 id="titleFont">Profile Page</h1>
+  <div class="profile" align="middle">
+    <div class="form-group">
+      <label class="profileInput">Name</label>
+      <p class="profileInfo" id="getName"></p>
+      <!-- <input type="text" class="form-control" id="getName" placeholder="Name"> -->
+    </div>
+    <div class="form-group">
+      <label class="profileInput">Email</label>
+      <p class="profileInfo" id="getEmail"></p>
+      <!-- <input type="text" class="form-control" id="getEmail" placeholder="Email"> -->
+    </div>
+    <div class="form-group">
+      <label class="profileInput">Tags
+        <span style="font-weight:100; opacity:0.8; font-style:italic">
+          &nbsp your interest
+          <button class="addBtn" onclick="document.getElementById('tagAdd').style.display='block'">+</button>
+        </span></label>
+    </div>
+
+    <script id="tagButton" type="text/x-handlebars-template">
+      <button class="tagbox" onclick="removeTag({{id}})" id="{{id}}">{{tag}} &times;</button>
+    </script>
+
+    <div class="form-group" id="templatedButton">
+    </div>
+
+    <button type="button" onclick="updateProfile()" class="signinbtn">Save</button> </br>
+    <button type="button" onclick="land()" class="cancelbtn">Cancel</button> </br>
+
+    <div id="tagAdd" class="modal">
+      <form class="modal-content animate">
+        <div class="container" align=center>
+          <label><b>What are you interested in?</b></label>
+          <input type="text" placeholder="Enter Tags" id="tags">
+          <button type="button" onclick="tagAdd()" class="signinbtn">Enter</button> </br>
+          <button type="button" onclick="document.getElementById('tagAdd').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</body>
+<script src="js_css/handlebars-v4.0.11.js"></script>
+<script src="js_css/lodash.js"></script>
+<script src="js_css/updateLS.js"></script>
+
+<!-- <script src="js_css/js1.js"></script> -->
+
+</html>

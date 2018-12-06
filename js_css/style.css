@@ -1,0 +1,484 @@
+/* XXX Overall Body Style XXX*/
+body {
+  margin-top: 100px;
+  padding: 0;
+  background: #EBFFF2;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 300;
+  align-content: center;
+  text-align: center;
+  background-size: cover;
+}
+
+.login {
+  margin-top: 0px;
+  background-image: url(../img/sky.jpg);
+}
+
+/* body */
+body.profile {
+  background-image: url(../img/plane1.jpg);
+}
+
+body.general {
+  background-image: url(../img/background1.jpg);
+}
+body.places{
+  /* margin-top:  */
+}
+/* navbars styles here  */
+body .navbar {
+  width: 100%;
+  align-content: right;
+  text-align: left;
+  background: #064F41;
+  position: absolute;
+  /* color: black; */
+}
+
+/* content box */
+body .content {
+  /* margin top right bottome left */
+  margin: 50px 100px auto 100px;
+  background: #D0C1D0;
+  border-style: solid;
+  border-color: #BFA5BF;
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+/* Clear floats after the content like <br>*/
+body .content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body .profile {
+  /* Margins from left and right */
+  margin-right: 500px;
+  margin-left: 500px;
+  background: #62A195;
+  border-style: solid;
+  border-color: #558B81;
+  border-radius: 10px;
+  padding: 30px 40px;
+}
+
+body.back{
+  margin-bottom: 50px;
+}
+.profileInput {
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+  width: 500px;
+  text-align: left;
+  position: relative;
+}
+.profileInfo{
+  color: white;
+  font-style: italic;
+}
+/* .body .profile .label{
+    text-align: left;
+} */
+/* XXX Login page XXX*/
+.login-box {
+  position: relative;
+  margin: 5% auto;
+  height: 450px;
+  width: 800px;
+  text-align: center;
+  background: #DAE1FF;
+  border-radius: 30px;
+}
+
+.left-box {
+  /* box-shadow: 2px 4px white; */
+  border-radius: 30px;
+  left: 20px;
+  top: 20px;
+  position: absolute;
+  padding: 40px;
+  height: 410px;
+  width: 370px;
+  background: #0B3443;
+  /* background-image: url(img/plane1.jpg);
+    background-size: cover;
+    background-position: center; */
+}
+
+.right-box {
+  border-radius: 30px;
+  position: relative;
+  left: 410px;
+  top: 20px;
+  padding: 40px;
+  width: 370px;
+  height: 410px;
+  background: #272D43;
+  /* background-image: url(img/ny.jpg);
+    background-size: cover;
+    background-position: center; */
+}
+
+.facebook {
+  background: #32508e;
+  margin-top: 30px;
+}
+
+.google {
+  background: #dd4b39;
+}
+
+/* content box */
+/* XXX XXX BODY XXX XXX */
+/* XXX Page Fonts XXX */
+/* Page Title */
+#titleFont {
+  margin: 0 0 20px 0;
+  color: 003027;
+  font-weight: 300;
+  font-size: 40px;
+  font-style: italic;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.login #titleFont {
+  color: white;
+}
+
+#boxTitleFont {
+  color: white;
+  margin: 0 0 20px 0;
+  font-weight: 300;
+  font-size: 28px;
+  text-align: center;
+}
+
+.greet {
+  text-align: right;
+  margin: 15px 30px auto auto;
+  color: white;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.tagFont {
+  text-align: left;
+  margin: 15px 30px auto 30px;
+  color: white;
+  font-size: 15px;
+  font-style: italic;
+}
+.tagbox {
+  /* text-align: left;
+  margin: 15px 30px auto 30px; */
+  background: #B9E9EE;
+  color: #04393D;
+  border-radius: 5px;
+  font-size: 15px;
+  /* font-style: italic; */
+  /* font-weight: bold; */
+}
+
+/* XXX Page Fonts XXX */
+/* XXX List Style XXX */
+/* To remove Bullets from lists */
+ul {
+  list-style-type: none;
+  padding: 3px;
+  text-align: center;
+  color: black;
+  position: relative;
+  font-size: 25px;
+}
+ul.navbar-nav {
+  /* opacity: 10; */
+  background-color: #064F41;
+  text-align: right;
+  font-size: 18px;
+  padding: 20px;
+  margin-right: 10px;
+}
+
+/* Trip lists Style */
+.triplist {
+  /* margin of top left bottom right */
+  margin: 0 200px 0 200px;
+}
+
+ul.triplist li:hover {
+  background: #dfd3d3;
+}
+
+/* Questionaire Style */
+.questionlist {
+  margin: 0 100px 0 100px;
+}
+
+.answerlist {
+  /* To enable pointer when mouse on it */
+  /* cursor: pointer; */
+  font-size: 18px;
+}
+
+/* XXX List Style XXX */
+/* XXX BUTTON Style XXX */
+/* General button style */
+button {
+  /* box color */
+  background: white;
+  /* text color */
+  color: black;
+  float: none;
+  text-align: center;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+/* Style the "Add" button on landing page */
+.addBtn {
+  background: #5F4E5F;
+  color: white;
+  /* padding: 10px; */
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.addBtn:hover {
+  background-color: #453A45;
+}
+
+/* Style the "Add Location" button on Tripplan */
+.addLocation {
+  margin-top: 10px;
+  width: 30%;
+  font-size: 20px;
+}
+
+.addLocation:hover {
+  background-color: #dfd3d3;
+}
+
+button.social {
+  margin-bottom: 20px;
+  width: 200px;
+  height: 36px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-family: sans-serif;
+  transition: 0.2s ease;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+body .profile .addBtn {
+  margin-left: 20px;
+  /* margin-bottom: 0px; */
+  width: 10%;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #D3D8EC;
+  /* background-color: black; */
+  margin: 1% auto 15% auto;
+  /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 30%;
+  /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+/* .tagClose{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  padding: 12px 16px;
+  transform: translate(0%, -50%);
+} */
+
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0)
+  }
+
+  to {
+    -webkit-transform: scale(1)
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+}
+
+.signinbtn {
+  border-radius: 5px;
+  width: 50%;
+  height: 40px;
+  background: #2196f3;
+  color: white;
+  margin-top: 5px;
+}
+
+.cancelbtn {
+  margin-top: 20px;
+  width: 30%;
+  height: 40px;
+  background: grey;
+  color: white;
+}
+
+/* XXX BUTTON Style XXX */
+/* XXX Input Properties XXX */
+/* General Input */
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+  /* align-content: center; */
+}
+
+/* input[type=text] {
+  background-color: #f1f1f1;
+  width: 100%;
+} */
+input[type="date"],
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 4px;
+  width: 220px;
+  height: 32px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #aaa;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  transition: 0.2s ease;
+}
+
+/* Specific for tag boxes */
+input.tag {
+  height: 100px;
+}
+
+input[type="submit"] {
+  margin-bottom: 28px;
+  width: 120px;
+  height: 40px;
+  background: #f44336;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background: #ff5722;
+  transition: 0.2s ease;
+}
