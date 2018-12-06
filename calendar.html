@@ -182,9 +182,9 @@
 
 	<br>
 
-	<h2>Recomended Activities For You
-		<span id="getTags"></span>!
-	</h2>
+	<h2>Recomended Activities For You</h2>
+	<h5> From your tags <span id="getTags" class = "recTags"></span> </h5>
+
 
 	<div class="container">
 		<div class="row">
@@ -420,8 +420,27 @@
 			window.location.href = "./search.html";
 		}, false);
 	</script>
+	<script> // To Add Tags
+		if (localStorage.getItem("Utags")) {
+		  // Retrieving UTags
+		  var userTags = [];
+		  userTags = JSON.parse(localStorage.getItem("Utags"));
+
+			var toReturn = "";
+		  for (var i = 0; i < userTags.length; i++) {
+				toReturn += userTags[i].tag + " ";
+		  }
+
+			document.getElementById("getTags").innerHTML = toReturn;
+
+		  // document.getElementById("getTags").innerHTML = userTags;
+		} else {
+		  document.getElementById("getTags").innerHTML = "-";
+		}
+	</script>
 
 
 </body>
+<script src="js_css/js1.js"></script>
 
 </html>
