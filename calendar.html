@@ -247,8 +247,13 @@
 		var calendar = jsCalendar.new(elements.calendar);
 		var min = modifyDate(JSON.parse(localStorage.getItem("startDates"))[0]);
 		var max = modifyDate(JSON.parse(localStorage.getItem('endDates'))[JSON.parse(localStorage.getItem('endDates')).length - 1]);
-		localStorage.setItem("date_selected", JSON.stringify(min));
-		calendar.set(min);
+        if(localStorage.getItem("date_selected")=== null){
+            localStorage.setItem("date_selected", JSON.stringify(min));
+            calendar.set(min);
+        }
+        else{
+            calendar.set(new Date(JSON.parse(localStorage.getItem("date_selected"))));
+        }
 		calendar.min(min);
 		calendar.max(max);
 

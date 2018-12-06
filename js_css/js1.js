@@ -180,7 +180,22 @@ function calender1() {
 }
 
 function addPlace() {
-  window.location.href = "../calendar.html";
+  var dselected= localStorage.getItem("date_selected");
+    var places=[];
+    if (localStorage.getItem(dselected) === null) {
+        places=[];
+    }
+    else{
+       places= JSON.parse(localStorage.getItem(dselected));
+    }
+
+    
+
+    var place= document.getElementById('titleFont').textContent;
+    places.push(place);
+    localStorage.setItem(dselected,JSON.stringify(places));
+    //localStorage.setItem('places',"Metropolitan");
+    window.location.href="../calendar.html";
 }
 
 function plan() {
