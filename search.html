@@ -35,13 +35,11 @@
           <a class="nav-link" href="profile.html">Profile</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="LandingPage.html">Active Trips / Plan a Trip</a>
+          <a class="nav-link" href="LandingPage.html">Active Trips</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="calendar.html">Calendar</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="previoustrips.html">Previous Trips</a>
         <li class="nav-item">
           <a class="nav-link" href="index.html">Logout</a>
         </li>
@@ -52,69 +50,22 @@
   </br></br>
   <!-- <p class="greet"> Bon Voyage, <span id="getName"> Stranger </span>! </p> -->
 
-	<h1 id="titleFont">
+  <h1 id="titleFont">
     Your trip in
-     <span style="font-weight:bold" id="getPlace"></span>!
+    <span style="font-weight:bold" id="getPlace"></span>!
   </h1>
 
   <!-- Search form -->
   <div class="content">
     <div class="input-group">
-      <input type="text" class="form-control" placeholder="Where?">
+      <input type="text" class="form-control" placeholder="Where?" id="toSearch">
       <div class="input-group-append">
-        <button class="btn btn-secondary" type="button" onclick=result()>
-        </button>
+        <button class="btn btn-secondary" type="button" onclick=result() id="forEnter"></button>
       </div>
     </div>
   </div>
 
   </br></br>
-
-
-
-
-
-  <div class="main">
-    <h2 class="font-weight-bold text-center">Recommendation</h2>
-    <!-- Image Preview -->
-    <div id="demo" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ul class="carousel-indicators">
-        <li data-target="#demo" data-slide-to="0" class="active"></li>
-        <li data-target="#demo" data-slide-to="1"></li>
-        <!-- <li data-target="#demo" data-slide-to="2"></li> -->
-      </ul>
-
-      <!-- The slideshow -->
-      <div class="carousel-inner text-center">
-        <div class="carousel-item active">
-          <img src="img/chicago.jpg" alt="G11111111111">
-          <h4>Chicago</h4>
-          <p class="lead mb-0">
-            Seems like you are having fun @Newyork. </br> How about <b> @Chicago</b>?
-          </p>
-        </div>
-        <div class="carousel-item">
-          <img src="img/disneyland.jpg" alt="G@@@@@@@@@@@">
-          <h4>Disneyland</h4>
-          <p class="lead mb-0">
-             How about <b> <a href="review.html">Disneyworld</a> </b>?
-          </p>
-        </div>
-        <!-- <div class="carousel-item">
-          <img src="img/golf.jpg" alt="New York">
-        </div> -->
-      </div>
-
-      <!-- Left and right controls -->
-      <a class="carousel-control-prev" href="#demo" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </a>
-      <a class="carousel-control-next" href="#demo" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </a>
-<!--  -->
-    </div>
 
 </body>
 
@@ -127,6 +78,17 @@
     document.getElementById("getPlace").innerHTML = "NONE";
   }
 </script>
+<script>
+// document.getElementById("forEnter")
+//     .addEventListener("keyup", function(event) {
+//     event.preventDefault();
+//     alert("here");
+//     if (event.keyCode === 13) {
+//       window.location.href = "./results.html";
+//         // document.getElementById("myButton").click();
+//     }
+// });
 
+</script>
 
 </html>

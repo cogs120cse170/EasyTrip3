@@ -1,4 +1,3 @@
-
 if (localStorage.getItem("Uname")) {
   document.getElementById("getName").innerHTML = localStorage.getItem("Uname");
 } else {

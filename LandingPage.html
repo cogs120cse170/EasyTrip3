@@ -10,7 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="js_css/style.css">
 </head>
 
-<body class="general">
+<body>
 	<nav class="navbar navbar-dark fixed-top">
 		<a class="navbar-brand" href="LandingPage.html">EasyTrip</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -26,13 +26,11 @@
 				</li>
 				<li class="nav-item active">
 					<a class="nav-link" href="navbarTemplate
-									">Active Trips / Plan a Trip</a>
+									">Active Trips</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="calendar.html">Calendar</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="previoustrips.html">Previous Trips</a>
 				<li class="nav-item">
 					<a class="nav-link" href="index.html">Logout</a>
 				</li>
@@ -41,22 +39,80 @@
 	</nav>
 	<p class="greet"> Bon Voyage, <span id="getName"> Stranger </span>! </p>
 
+	<!-- To implement several buttons, add ID to each trip and use handlebars -->
+	<script id="placeButton" type="text/x-handlebars-template">
+		<button class="placeStyle" onclick="calender1()"></button>
+		<button type="button" onclick="calender1()" class="placeGo" id="getPlace">{{placeName}}</button>
+	</script>
+
+	<!-- <div class="form-group" id="templatedButton">
+	</div> -->
+
+
+
 
 	<h1 id="titleFont">Active Trips</h1>
 	<div class="content">
-		<ul id="myTripList" class="triplist">
-			<!-- <li>California</li> -->
-			<!-- <li class="checked">New York</li> -->
-		</ul>
+		<div class="form-group" id="templatedButton"></div>
+
+		<!-- <div>
+			<button type="button" onclick="calender1()" class="placeStyle"></button>
+			<button type="button" onclick="calender1()" class="placeGo" id="getPlace"></button>
+		</div> -->
+
+
+		<!-- <ul id="myTripList" class="triplist"> -->
+		<!-- <li>California</li> -->
+		<!-- <li class="checked">New York</li> -->
+		<!-- <h1 id="titleFont">
+				Your trip in
+				 <span style="font-weight:bold" id="getPlace"></span>!
+			</h1> -->
+
+		<!-- </ul> -->
 		<br>
-		<button id=trip_add onclick="plan()" class="addBtn">Plan 	new trip</button>
+		<button id=trip_add onclick="plan()" class="addBtn">Plan new trip</button>
 	</div>
 	</br>
+	<script>	//If trip is made, create element
+		// To Add Trips
+		if (localStorage.getItem("Uplace")) {
+			var place = localStorage.getItem("Uplace");
+			// alert(place);
+			document.getElementById("getPlace").innerHTML = place;
+			// } else {
+			// 	document.getElementById("getTags").innerHTML = "-";
+		}
+	</script>
 
 </body>
-<!-- <script src="https://code.jquery.com/jquery.js"></script> -->
-<!-- <script src="js_css/handlebars-v4.0.11.js"></script> -->
-<script src="js_css/js1.js"></script>
+<script src="js_css/handlebars-v4.0.11.js"></script>
+<script src="js_css/lodash.js"></script>
 <script src="js_css/updateLS.js"></script>
+<script>
+  if (localStorage.getItem("Uplace")){
+		var toTravel = localStorage.getItem("Uplace");
+		var context = {placeName: toTravel};
+
+    var source   = document.getElementById("placeButton").innerHTML;
+    var template = Handlebars.compile(source);
+
+    var parentDiv = $("#templatedButton");
+
+    // for (var i = 0; i < userTags.length; i++) {
+    //   var curData = userTags[i];
+    //   // alert("here");
+    //   var curHtml = template(curData);
+    //   parentDiv.append(curHtml);
+    // }
+		parentDiv.append(template(context));
+    // document.getElementById("getTags").innerHTML = userTags;
+  }
+  // else {
+	// 	alert("no place added yet");
+  //   // document.getElementById("getTags").innerHTML = "-";
+  // }
+</script>
+<script src="js_css/js1.js"></script>
 
 </html>

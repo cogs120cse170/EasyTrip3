@@ -24,9 +24,7 @@ body.profile {
 body.general {
   background-image: url(../img/background1.jpg);
 }
-body.places{
-  /* margin-top:  */
-}
+
 /* navbars styles here  */
 body .navbar {
   width: 100%;
@@ -162,7 +160,7 @@ body.back{
 .greet {
   text-align: right;
   margin: 15px 30px auto auto;
-  color: white;
+  color: #064F41;
   font-size: 20px;
   font-style: italic;
 }
@@ -246,6 +244,33 @@ button {
   cursor: pointer;
   transition: 0.3s;
   border-radius: 0;
+}
+
+.placeStyle{
+  margin: auto;
+  height: 300px;
+  width: 600px;
+  text-align: center;
+  /* background: #DAE1FF; */
+  background-image: url(../img/newyork.jpg);
+  background-size: cover;
+  background-position: center;
+  display:block;
+  /* border-radius: 30px; */
+}
+.placeGo {
+  margin: auto;
+  text-align: center;
+  width: 600px;
+  display:block;
+  background: #064F41;
+  color: white;
+  font-weight: bold;
+
+
+}
+.placeGo:hover {
+  background-color: #dfd3d3;
 }
 
 /* Style the "Add" button on landing page */

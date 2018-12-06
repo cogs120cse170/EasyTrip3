@@ -23,8 +23,6 @@ function signup() {
 function signin() {
   localStorage.clear();
   var inputName = document.getElementById("Ename");
-  alert(inputName);
-
   if (inputName.value) {
     localStorage.setItem("Uname", inputName.value);
   } else {
@@ -111,8 +109,6 @@ window.onclick = function(event) {
   }
 }
 
-
-
 function updateProfile() {
   var inputName = document.getElementById("getName");
   if (inputName.value)
@@ -146,13 +142,24 @@ function calender() {
     endDates.push(document.getElementsByClassName('end')[i].value);
   }
 
-  //Temporarily added
+  // This is to save all places
   localStorage.setItem("Uplace", locations);
-  alert(locations);
-  alert(JSON.stringify(startDates));
-  alert(JSON.stringify(endDates));
 
-
+  // XXX If Implementing several trips,
+  // var allTrips = [];
+  // if (localStorage.getItem("Uplaces")) {
+  //   allTrips = JSON.parse(localStorage.getItem("Uplaces"));
+  // }
+  // // var userTag = document.getElementById("tags");
+  // if (locations.value) {
+  //   locationsJSONed = {
+  //     'id': allTrips.length + 1,  // XXX maybe different id required (if in need to be diff)
+  //     'place': locations.value;
+  //   }
+  //   // alert(JSON.stringify(userTagJSONed));
+  //   allTrips.push(locationsJSONed);
+  //   localStorage.setItem("Uplaces", JSON.stringify(allTrips));
+  // }
 
   localStorage.setItem("locations", JSON.stringify(locations));
   localStorage.setItem("startDates", JSON.stringify(startDates));
@@ -181,8 +188,23 @@ function review() {
 }
 
 function result() {
+  var placeSearched = document.getElementById("toSearch");
+  if (placeSearched.value) {
+    localStorage.setItem("Usearch", placeSearched.value);
+  } else {
+    localStorage.setItem("Usearch", "-");
+  }
+
   window.location.href = "./results.html";
 }
+
+document.getElementById("toSearch")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("forEnter").click();
+    }
+});
 
 function newLoc() {
   var inputPlace = document.getElementById("Uplace");

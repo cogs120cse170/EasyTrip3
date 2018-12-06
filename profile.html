@@ -8,8 +8,6 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   <script src="js_css/js1.js"></script>
-
-
   <link rel="stylesheet" type="text/css" href="js_css/style.css">
 </head>
 
@@ -26,13 +24,11 @@
           <a class="nav-link" href="profile.html">Profile</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="LandingPage.html">Active Trips / Plan a Trip</a>
+          <a class="nav-link" href="LandingPage.html">Active Trips</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="calendar.html">Calendar</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="previoustrips.html">Previous Trips</a>
         <li class="nav-item">
           <a class="nav-link" href="index.html">Logout</a>
         </li>
@@ -81,11 +77,38 @@
     </div>
 
   </div>
+
+
+
 </body>
 <script src="js_css/handlebars-v4.0.11.js"></script>
 <script src="js_css/lodash.js"></script>
 <script src="js_css/updateLS.js"></script>
+<script>
+  if (localStorage.getItem("Utags")){
+    // Retrieving UTags
+    var userTags = [];
+    userTags = JSON.parse(localStorage.getItem("Utags"));
+    // alert(userTags);
+          // alert(userTags);
 
-<!-- <script src="js_css/js1.js"></script> -->
+    var source   = document.getElementById("tagButton").innerHTML;
+    var template = Handlebars.compile(source);
+
+    var parentDiv = $("#templatedButton");
+
+    for (var i = 0; i < userTags.length; i++) {
+      var curData = userTags[i];
+      // alert("here");
+      var curHtml = template(curData);
+      parentDiv.append(curHtml);
+    }
+    // document.getElementById("getTags").innerHTML = userTags;
+  }
+  // else {
+  //   document.getElementById("getTags").innerHTML = "-";
+  // }
+</script>
+<script src="js_css/js1.js"></script>
 
 </html>
