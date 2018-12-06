@@ -167,6 +167,14 @@ function calender() {
   window.location.href = "./calendar.html";
 }
 
+function modifyDate(date){
+    var year =date.substring(2,4);
+    var day= date.substring(5,7);
+    var month= date.substring(8);
+    var formated= day+"/"+month+"/"+year
+    return new Date(formated);
+}
+
 function calender1() {
   window.location.href = "./calendar.html";
 }
