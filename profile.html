@@ -14,7 +14,6 @@
 <body class="profile">
   <!-- Top Nav Bar -->
   <nav class="navbar navbar-dark fixed-top">
-    <a class="navbar-brand" href="LandingPage.html">EasyTrip</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -24,7 +23,7 @@
           <a class="nav-link" href="profile.html">Profile</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="LandingPage.html">Active Trips</a>
+          <a class="nav-link" href="navbarTemplate">Active Trips</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="calendar.html">Calendar</a>
@@ -34,7 +33,15 @@
         </li>
       </ul>
     </div>
+    <a class="fixed-top navbar-brand" href="LandingPage.html">
+      <img src="img/Logo.png" alt="Logo" class="logo">
+    </a>
   </nav>
+
+  <a onclick="goBack()">
+    <img src="img/back.png" class="back" alt="back">
+  </a>
+
   <h1 id="titleFont">Profile Page</h1>
   <div class="profile" align="middle">
     <div class="form-group">
@@ -70,11 +77,20 @@
         <div class="container" align=center>
           <label><b>What are you interested in?</b></label>
           <input type="text" placeholder="Enter Tags" id="tags">
-          <button type="button" onclick="tagAdd()" class="signinbtn">Enter</button> </br>
+          <button type="button" onclick="tagAdd()" class="signinbtn" id="forEnter">Enter</button> </br>
           <button type="button" onclick="document.getElementById('tagAdd').style.display='none'" class="cancelbtn">Cancel</button>
         </div>
       </form>
     </div>
+    <!--
+    <div class="content">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Where?" id="toSearch">
+        <div class="input-group-append">
+          <button class="btn btn-secondary" type="button" onclick=result() id="forEnter"></button>
+        </div>
+      </div>
+    </div> -->
 
   </div>
 
@@ -84,30 +100,28 @@
 <script src="js_css/handlebars-v4.0.11.js"></script>
 <script src="js_css/lodash.js"></script>
 <script src="js_css/updateLS.js"></script>
-<script>
-  if (localStorage.getItem("Utags")){
+<script> // Making Tag Buttons
+  if (localStorage.getItem("Utags")) {
     // Retrieving UTags
     var userTags = [];
     userTags = JSON.parse(localStorage.getItem("Utags"));
-    // alert(userTags);
-          // alert(userTags);
-
-    var source   = document.getElementById("tagButton").innerHTML;
+    var source = document.getElementById("tagButton").innerHTML;
     var template = Handlebars.compile(source);
-
     var parentDiv = $("#templatedButton");
-
     for (var i = 0; i < userTags.length; i++) {
       var curData = userTags[i];
-      // alert("here");
       var curHtml = template(curData);
       parentDiv.append(curHtml);
     }
-    // document.getElementById("getTags").innerHTML = userTags;
   }
-  // else {
-  //   document.getElementById("getTags").innerHTML = "-";
-  // }
+</script>
+<script> // Allowing "Enter" to submit
+  document.getElementById("tags").addEventListener('keypress', function(event) {
+    if (event.keyCode == 13) {
+      event.preventDefault();
+      document.getElementById("forEnter").click();
+    }
+  });
 </script>
 <script src="js_css/js1.js"></script>
 

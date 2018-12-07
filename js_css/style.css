@@ -64,9 +64,10 @@ body .profile {
   padding: 30px 40px;
 }
 
-body.back{
+body.Tripplanlayout {
   margin-bottom: 50px;
 }
+
 .profileInput {
   font-weight: bold;
   color: white;
@@ -75,10 +76,12 @@ body.back{
   text-align: left;
   position: relative;
 }
-.profileInfo{
+
+.profileInfo {
   color: white;
   font-style: italic;
 }
+
 /* .body .profile .label{
     text-align: left;
 } */
@@ -172,12 +175,13 @@ body.back{
   font-size: 15px;
   font-style: italic;
 }
-.recTags{
+
+.recTags {
   font-weight: bold;
   font-style: italic;
   color: #04393D;
-
 }
+
 .tagbox {
   /* text-align: left;
   margin: 15px 30px auto 30px; */
@@ -200,10 +204,11 @@ ul {
   position: relative;
   font-size: 25px;
 }
+
 ul.navbar-nav {
   /* opacity: 10; */
   background-color: #064F41;
-  text-align: right;
+  text-align: left;
   font-size: 18px;
   padding: 20px;
   margin-right: 10px;
@@ -245,8 +250,28 @@ button {
   transition: 0.3s;
   border-radius: 0;
 }
+.navbar-brand{
+  margin-left: 500px;
+  margin-right: 500px;
+  margin-top: 0px;
+  position: absolute;
+}
+.logo {
+  width: 300px;
+  height: 50px;
+  margin-top: 0px;
+  padding-top: 0;
+}
+.back{
+  position: absolute;
+  left: 0px;
+  top: 40px;
+  width: 150px;
+  cursor: pointer;
+}
 
-.placeStyle{
+
+.placeStyle {
   margin: auto;
   height: 300px;
   width: 600px;
@@ -255,20 +280,20 @@ button {
   background-image: url(../img/newyork.jpg);
   background-size: cover;
   background-position: center;
-  display:block;
+  display: block;
   /* border-radius: 30px; */
 }
+
 .placeGo {
   margin: auto;
   text-align: center;
   width: 600px;
-  display:block;
+  display: block;
   background: #064F41;
   color: white;
   font-weight: bold;
-
-
 }
+
 .placeGo:hover {
   background-color: #dfd3d3;
 }
@@ -330,6 +355,7 @@ img.avatar {
 .container {
   padding: 16px;
 }
+
 body .profile .addBtn {
   margin-left: 20px;
   /* margin-bottom: 0px; */
@@ -405,7 +431,6 @@ span.psw {
   padding: 12px 16px;
   transform: translate(0%, -50%);
 } */
-
 @-webkit-keyframes animatezoom {
   from {
     -webkit-transform: scale(0)

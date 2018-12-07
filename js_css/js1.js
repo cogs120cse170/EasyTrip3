@@ -1,6 +1,17 @@
+// document.getElementById("tags")
+//     .addEventListener("keyup", function(event) {
+//     event.preventDefault();
+//     if (event.keyCode === 13) {
+//         document.getElementById("forEnter").click();
+//     }
+// });
 
 function land() {
   window.location.href = "./LandingPage.html";
+}
+
+function goBack() {
+    window.history.back();
 }
 
 function signup() {
@@ -72,14 +83,19 @@ function tagAdd() {
       'id': userTags.length + 1,
       'tag': "#" + userTag.value
     }
-    // alert(JSON.stringify(userTagJSONed));
     userTags.push(userTagJSONed);
-    // userTags.push(userTag.value);
     localStorage.setItem("Utags", JSON.stringify(userTags));
   }
-
   window.location.href = "./profile.html";
 }
+
+// document.getElementById("tags")
+//     .addEventListener("keyup", function(event) {
+//     event.preventDefault();
+//     if (event.keyCode === 13) {
+//         document.getElementById("forEnter").click();
+//     }
+// });
 
 function removeTag(tagID) {
   var userTags = JSON.parse(localStorage.getItem("Utags"));
@@ -189,7 +205,7 @@ function addPlace() {
        places= JSON.parse(localStorage.getItem(dselected));
     }
 
-    
+
 
     var place= document.getElementById('titleFont').textContent;
     places.push(place);
@@ -217,7 +233,6 @@ function result() {
   } else {
     localStorage.setItem("Usearch", "-");
   }
-
   window.location.href = "./results.html";
 }
 
@@ -228,6 +243,8 @@ document.getElementById("toSearch")
         document.getElementById("forEnter").click();
     }
 });
+
+
 
 function newLoc() {
   var inputPlace = document.getElementById("Uplace");
