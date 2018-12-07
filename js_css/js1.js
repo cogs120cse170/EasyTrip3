@@ -150,7 +150,29 @@ function calender() {
   var locations = [];
   var startDates = [];
   var endDates = [];
+    if(document.getElementsByClassName('form-control')[0].value===""){
+        alert("Please select a location");
+        return;
+    }
 
+    else if(document.getElementsByClassName('start')[0].value===""){
+        alert("Please select a start date");
+        return;
+    }
+    else if(modifyDate(document.getElementsByClassName('start')[0].value)< new Date()){
+        alert("Start date has already passed. Please pick a valid upcoming start date.");
+        return;
+    }
+    else if(document.getElementsByClassName('end')[0].value===""){
+        alert("Please selct end date");
+        return;
+    }
+    else if(modifyDate(document.getElementsByClassName('start')[0].value)< modifyDate(document.getElementsByClassName('start')[0].value)){
+        alert("Start date must preceed end date.");
+        return;
+    }
+    
+    
   var i;
   for (i = 0; i < number; i++) {
     locations.push(document.getElementsByClassName('form-control')[i].value);
